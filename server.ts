@@ -26,15 +26,15 @@ app.get('/', (req, res) => {
             {
                 api: 'donuts',
                 description:
-                    "Get's all Donuts from the api. Can optionally provide type as a a CSV query param",
+                    "Gets all Donuts from the api. Can optionally provide type as a a CSV query param",
             },
             {
                 api: 'donuts/:id',
-                description: "Get's a donut from the api",
+                description: "Gets a donut from the api",
             },
             {
                 api: 'types',
-                description: "Get's all donut types the api",
+                description: "Gets all donut types the api",
             },
         ],
     });
@@ -63,5 +63,5 @@ app.get('/donuts/:donutId', (req, res) => {
 app.get('/types', (req, res) => res.json(donutTypes));
 
 app.listen(port, () =>
-    console.log(`Example app listening at http://localhost:${port}`),
+    console.log(`Donuts API Server listening at http://localhost:${port}`),
 );
